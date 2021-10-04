@@ -1,8 +1,15 @@
 <?php
-$enlace = mysql_connect('40.71.126.219:3306', 'daniel',  'pelusa');
+$enlace = mysqli_connect("40.71.126.219","daniel","pelusa","sys","3306");
+
 if (!$enlace) {
-    die('No pudo conectarse: ' . mysql_error());
+    echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+    echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+    echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+    exit;
 }
-echo 'Conectado satisfactoriamente';
-mysql_close($enlace);
+
+echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
+echo "Información del host: " . mysqli_get_host_info($enlace) . PHP_EOL;
+
+mysqli_close($enlace);
 ?>
