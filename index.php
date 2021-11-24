@@ -8,7 +8,7 @@
 	<h1>Registro de nombres</h1>
     <form method="post">
     	<input type="text" name="name" placeholder="Nombre completo">
-    	<input type="submit" name="register">
+    	<input type="submit" name="register" value="Guardar nombre en la bd">
     </form>
         <?php 
         include("registrar.php");
