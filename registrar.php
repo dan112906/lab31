@@ -6,7 +6,7 @@ if (isset($_POST['register'])) {
     if (strlen($_POST['name']) >= 1) {
 	    $name = trim($_POST['name']);
 	    $consulta = "INSERT INTO datos VALUES ('$name')";
-	    $resultado = mysqli_query($conex,$consulta);
+	    $resultado = mysqli_query($con,$consulta);
 	    if ($resultado) {
 	    	?> 
 	    	<h3>Nombre guardado correctamente</h3>
