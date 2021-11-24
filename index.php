@@ -28,9 +28,9 @@ if(isset($_POST['submit'])) {
     $db = "personas";
    
    // Create connection
-   $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$db);
+   $enlace = mysqli_connect($dbhost, $dbuser, $dbpass,$db);
    // Check connection
-   if (!$conn) {
+   if (!$enlace) {
       die("Connection failed: " . mysqli_connect_error());
    }
 $nom = $_POST['yourname'];
