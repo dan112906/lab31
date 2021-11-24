@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 </head>
 <body>
+	<h1>Registro de nombres</h1>
     <form method="post">
     	<input type="text" name="name" placeholder="Nombre completo">
     	<input type="submit" name="register">
